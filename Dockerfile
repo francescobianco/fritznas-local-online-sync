@@ -1,4 +1,4 @@
-FROM alpine:3
+FROM alpine:3.19
 
 RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories && \
 	apk update && \
@@ -17,6 +17,7 @@ RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositor
 		file \
 		diffutils \
 		lftp \
+    	tzdata \
 		curlftpfs && \
     rm -rf /var/cache/apk/*
 

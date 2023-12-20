@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
 set -e
 
+exec "$@"
+exit 0
+
 crontab=/var/spool/cron/crontabs/root
 
 >$crontab
